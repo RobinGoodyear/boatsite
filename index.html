@@ -7,9 +7,15 @@
     <title></title>
     <meta name="description" content="" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <script src="https://cdn.tailwindcss.com"></script>
-    <!-- <link rel="stylesheet" href="style.css" /> -->
+    <script src="https://cdn.tailwindcss.com" ></script>
+   <link rel="stylesheet" href="style.css"/>
     <!-- <link href="./output.css" rel="stylesheet"/> -->
+    <link rel="stylesheet"
+          type="text/css"
+          href="./lightbox.min.css">
+    <script src=
+"./lightbox-plus-jquery.min.js">
+    </script>
   </head>
   <!-- <body class="flex flex-col items-start p-0 font-serif">
     <header class="bg-blue-500 flex py-4 flex-wrap flex-grow flex-auto min-w-full">
@@ -36,7 +42,7 @@
                     <h1 class="text-l text-amber-100">Marine Loisirs SA</h1>
                     <h2 class="text-sm text-amber-100">Chantier Naval et Atelier Mécanique <br> pour Moteurs Marins</h2>
                   </div>
-                  <div class="invisible md:visible md:flex">
+                  <div class="hidden md:flex self-end">
                     <ul class="text-l text-amber-100 sm:text-l">
                       <li><a href="#">Accueil</a></li>
                       <li><a href="#">Entretien</a></li>
@@ -46,7 +52,7 @@
                   </div>
                 <!--Hamburger menu icon svg to trigger the slide-in menu when clicked-->
                   <div onclick="openNav()">
-                      <svg class="cursor-pointer object-right" xmlns="http://www.w3.org/2000/svg" width="18.853" height="12" viewBox="0 0 18.853 12">
+                      <svg class="md:hidden cursor-pointer object-right" xmlns="http://www.w3.org/2000/svg" width="18.853" height="12" viewBox="0 0 18.853 12">
                           <g id="Icon_feather-menu" data-name="Icon feather-menu" transform="translate(-4.5 -8)">
                               <path id="Path_3" data-name="Path 3" d="M4.5,18H23.353" transform="translate(0 -4)" fill="none" stroke="#FFEFD5" stroke-linejoin="round" stroke-width="2"/>
                               <path id="Path_4" data-name="Path 4" d="M4.5,9H23.353" transform="translate(0)" fill="none" stroke="#FFEFD5" stroke-linejoin="round" stroke-width="2"/>
@@ -97,6 +103,23 @@
       <img class="w-28" src="images/Volvo.jpg">
       <img class="w-28" src="images/mercury.jpg">
     </div>
+    <div class="my-4 mx-4">
+      <a href=
+"images/porte.jpg" data-lightbox="mygallery">
+          <img class="w-28 duration-100 p-4 hover:drop-shadow-lg hover:scale-110" src=
+"images/porte.jpg">
+      </a>
+      <a href=
+"images/Volvo.jpg" data-lightbox="mygallery">
+          <img class="w-28 duration-100 p-4 hover:drop-shadow-lg hover:scale-110" src=
+"images/Volvo.jpg">
+      </a>
+      <a href=
+"images/mercury.jpg" data-lightbox="mygallery">
+          <img class="w-28 duration-100 p-4 hover:drop-shadow-lg hover:scale-110" src=
+"images/mercury.jpg">
+      </a>
+      </div>
     <footer class="w-full border-t border-grey py-8 pin-b bg-gradient-to-b from-blue-950 to-blue-800">
       <div class="flex flex-wrap text-amber-100 gap-8">
         <div class="px-4">
