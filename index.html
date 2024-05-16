@@ -17,17 +17,14 @@
 "js/lightbox-plus-jquery.min.js">
     </script>
   </head>
-  <!-- <body class="flex flex-col items-start p-0 font-serif">
-    <header class="bg-blue-500 flex py-4 flex-wrap flex-grow flex-auto min-w-full">
-      <div  class="flex flex-row items-start p-2.5 gap-2.5 w-full h-20.8"> -->
-        <body class="flex flex-col items-start p-0 font-serif">
 
-    <header class="bg-blue-500 flex p-4  flex-wrap flex-grow flex-auto min-w-full">
-      <div  class="flex flex-row justify-between md:justify-items-start w-full md:px-20 lg:px-40 xl:px-60">
-          <nav class="flex w-full justify-between">
-                  <div class="text-amber-100 flex flex-none">
-                    <a href="./index.html"><svg 
-                    class="flex-none pt-2 w-full md:w-24 h-6"
+  <body class="flex flex-col items-start p-0 font-serif">
+    <header class="flex flex-wrap flex-auto flex-grow p-4 min-w-full bg-blue-500">
+      <div  class="container flex flex-row justify-between mx-auto w-full md:justify-items-start">
+          <nav class="flex justify-between w-full">
+                  <div class="flex flex-none text-amber-100">
+                    <a href="./index.html"><svg
+                    class="flex-none pt-2 w-full h-6 md:w-24"
                       viewBox="0 0 85 23"
                       fill="none"
                       xmlns="http://www.w3.org/2000/svg"
@@ -37,23 +34,23 @@
                         fill="currentColor"
                       />
                     </svg></a>
-                  
-                    <div class="flex flex-col  px-4 w-60  flex-none">
-                      <h1 class="text-lg  text-amber-100">Marine Loisirs SA</h1>
-                      <h2 class="text-xs font-sans text-amber-100">Chantier Naval et Atelier Mécanique <br> pour Moteurs Marins</h2>
+
+                    <div class="flex flex-col flex-none px-4 w-60">
+                      <h1 class="text-lg text-amber-100">Marine Loisirs SA</h1>
+                      <h2 class="font-sans text-xs text-amber-100">Chantier Naval et Atelier Mécanique <br> pour Moteurs Marins</h2>
                     </div>
                   </div>
-                  <div class="hidden md:flex md:place-self-end">
-                    <ul class="text-l text-amber-100 sm:text-l flex flex-col md:flex-row content-end md:justify-end">
-                      <li class="px-1"><a href="./index.html">Accueil</a></li>
-                      <li class="px-1"><a href="./entretien.html">Entretien</a></li>
-                      <li class="px-1"><a href="./hivernage.html">Hivernage</a></li>
-                      <li class="px-1"><a href="#">Occasions</a></li>
+                  <div class="hidden w-full md:flex md:place-self-end">
+                    <ul class="flex flex-col gap-8 content-end w-full text-amber-100 text-l sm:text-l md:flex-row md:justify-end">
+                      <li class="px-1"><a href="./index.html" class="text-pretty hover:border-b">Accueil</a></li>
+                      <li class="px-1"><a href="./entretien.html" class="text-pretty hover:border-b">Entretien</a></li>
+                      <li class="px-1"><a href="./hivernage.html" class="text-pretty hover:border-b">Hivernage</a></li>
+                      <li class="px-1"><a href="#" class="text-pretty hover:border-b">Occasions</a></li>
                   </ul>
                   </div>
                 <!--Hamburger menu icon svg to trigger the slide-in menu when clicked-->
                   <div onclick="openNav()">
-                      <svg class="md:hidden cursor-pointer object-right" xmlns="http://www.w3.org/2000/svg" width="18.853" height="12" viewBox="0 0 18.853 12">
+                      <svg class="object-right cursor-pointer md:hidden" xmlns="http://www.w3.org/2000/svg" width="18.853" height="12" viewBox="0 0 18.853 12">
                           <g id="Icon_feather-menu" data-name="Icon feather-menu" transform="translate(-4.5 -8)">
                               <path id="Path_3" data-name="Path 3" d="M4.5,18H23.353" transform="translate(0 -4)" fill="none" stroke="#FFEFD5" stroke-linejoin="round" stroke-width="2"/>
                               <path id="Path_4" data-name="Path 4" d="M4.5,9H23.353" transform="translate(0)" fill="none" stroke="#FFEFD5" stroke-linejoin="round" stroke-width="2"/>
@@ -62,11 +59,11 @@
                       </svg>
                   </div>
                 <!--background overlay element, it will close navbar when clicked-->
-                  <div onclick="exitNav()" id="sideBar" class="fixed top-0 right-0 bg-transparent w-0 h-full overflow-x-hidden duration-500 z-10">
+                  <div onclick="exitNav()" id="sideBar" class="overflow-x-hidden fixed top-0 right-0 z-10 w-0 h-full bg-transparent duration-500">
                       <!--navigation menu box-->
-                      <div id="sideNav" class="fixed top-0 right-0 bg-gradient-to-r from-blue-950 to-blue-800 z-10 overflow-x-hidden duration-500 font-bold flex justify-center items-center h-full w-0">
+                      <div id="sideNav" class="flex overflow-x-hidden fixed top-0 right-0 z-10 justify-center items-center w-0 h-full font-bold bg-gradient-to-r to-blue-800 duration-500 from-blue-950">
                           <!--exit icon, it will close navbar when clicked-->
-                          <a href="javascript:void(0)" onclick="exitNav()" class="text-3xl absolute top-0 right-0 mr-3 mt-2">&times;</a>
+                          <a href="javascript:void(0)" onclick="exitNav()" class="absolute top-0 right-0 mt-2 mr-3 text-3xl">&times;</a>
                           <ul class="text-2xl text-amber-100 sm:text-3xl">
                               <li><a href="./index.html">Accueil</a></li>
                               <li><a href="./entretien.html">Entretien</a></li>
@@ -81,17 +78,19 @@
 
       </div>
       <div class="flex flex-row w-full">
-        <img class="flex flex-grow min-w-full min-h-40 h-auto" src="images/grue.jpg">
+        <img class="flex object-cover object-bottom flex-grow min-w-full h-40 md:h-60" src="images/grue.jpg">
       </div>
-    <main class="p-4 bg-amber-50">
-      <section class="md:px-20 lg:px-40 xl:px-60">
-        <h2 class="text-3xl">Bienvenue!</h2>
-          <p class="">
+    <main class="p-4 w-full bg-amber-50">
+      <section class="container py-2 mx-auto">
+        <h2 class="py-4 text-3xl">Bienvenue!</h2>
+          <p class="mb-2">
             Ouvert dans les années septante,
             le chantier naval Marine Loisirs à Founex a été repris il y
             a cinq ans par Alexandre et Angela Glauser, qui assurent la
             pérennité de cette entreprise réputée dans le monde des
-            navigateurs en poursuivant dans la lignée de leur prédécesseur. <br>
+            navigateurs en poursuivant dans la lignée de leur prédécesseur.
+          </p>
+          <p class="mb-2">
             Employant deux mécaniciens et un apprenti qui se forme au nouveau
             métier d'agent d'entretien de bateaux, l'entreprise propose toute
             une palette de prestations aux amoureux de la navigation de
@@ -99,25 +98,27 @@
           </p>
       </section>
     </main>
-    <div class="flex flex-wrap min-w-full justify-around p-4 bg-amber-50">
-      <a href=
+    <div class="justify-around p-4 w-full bg-amber-50">
+      <div class="container grid grid-cols-3 gap-4 mx-auto w-full">
+        <a href=
       "images/porte.jpg" data-lightbox="mygallery">
-                <img class="w-28 duration-100 p-4 hover:drop-shadow-lg hover:scale-110" src=
+                <img class="duration-100 aspect-auto hover:drop-shadow-lg hover:scale-110" src=
       "images/porte.jpg">
             </a>
             <a href=
       "images/Volvo.jpg" data-lightbox="mygallery">
-                <img class="w-28 duration-100 p-4 hover:drop-shadow-lg hover:scale-110" src=
+                <img class="duration-100 aspect-auto hover:drop-shadow-lg hover:scale-110" src=
       "images/Volvo.jpg">
             </a>
             <a href=
       "images/mercury.jpg" data-lightbox="mygallery">
-                <img class="w-28 duration-100 p-4 hover:drop-shadow-lg hover:scale-110" src=
+                <img class="duration-100 aspect-auto hover:drop-shadow-lg hover:scale-110" src=
       "images/mercury.jpg">
             </a>
+      </div>
     </div>
-    <footer class="w-full border-t border-grey py-8 pin-b bg-gradient-to-b from-blue-950 to-blue-800 md:px-20 lg:px-40 xl:px-60">
-      <div class="flex flex-wrap text-amber-100 gap-10">
+    <footer class="py-8 w-full bg-gradient-to-b to-blue-800 border-t border-grey pin-b from-blue-950">
+      <div class="container flex flex-wrap gap-10 mx-auto text-amber-100">
         <div class="px-4">
           <p>Marine Loisirs <br />Rte suisse <br />1297 Founex</p>
         </div>
@@ -127,8 +128,8 @@
           info@marine-loisirs.ch
         </div>
       </div>
-      <div>
-        <p class="p-4 text-amber-100 text-xs">Copyright 2024</p>
+      <div class="container mx-auto">
+        <p class="p-4 text-xs text-amber-100">Copyright 2024</p>
       </div>
     </footer>
     <script src="js/menu.js"></script>
