@@ -90,30 +90,35 @@
           </p>
       </section>
     </main>
-      <div class="justify-around p-4 w-full bg-amber-50">
-        <div class="container grid grid-cols-4 gap-4 mx-auto w-full">
-        <a href=
-        "images/mercury-mercruiser.svg" data-lightbox="mygallery">
-                  <img class="w-28 duration-100 p-4 hover:drop-shadow-lg hover:scale-110" src=
-        "images/mercury-mercruiser.svg">
-              </a>
-              <a href=
-        "images/outboards-by-yamaha.svg" data-lightbox="mygallery">
-                  <img class="w-28 duration-100 p-4 hover:drop-shadow-lg hover:scale-110" src=
-        "images/outboards-by-yamaha.svg">
-              </a>
-              <a href=
-        "images/SVGmix-yj5089-volvo-penta.svg" data-lightbox="mygallery">
-                  <img class="w-28 duration-100 p-4 hover:drop-shadow-lg hover:scale-110" src=
-        "images/SVGmix-yj5089-volvo-penta.svg">
-              </a>
-              <a href=
-              "images/tohatsu-company-logo.svg" data-lightbox="mygallery">
-                        <img class="w-28 duration-100 p-4 pt-8 hover:drop-shadow-lg hover:scale-110" src=
-              "images/tohatsu-company-logo.svg">
-                    </a>
-
-      </div>
+      <div class="w-full inline-flex flex-nowrap pb-6 bg-amber-50">
+        <ul class="animate-infinite-scroll flex items-center justify-center md:justify-start [&_li]:mx-8 [&_img]:max-w-40">
+            <li>
+              <img src="images/mercury-mercruiser.svg" alt="MerCruiser" />
+            </li>
+            <li>
+              <img src="images/outboards-by-yamaha.svg" alt="yamaha" />
+            </li>
+            <li>
+              <img src="images/SVGmix-yj5089-volvo-penta.svg" alt="volvo-penta" />
+            </li>     
+            <li>
+              <img src="images/tohatsu-company-logo.svg" alt="tohatsu" />
+            </li>        
+          </ul>
+          <ul class="animate-infinite-scroll flex items-center justify-center md:justify-start [&_li]:mx-8 [&_img]:max-w-40" aria-hidden="true">
+            <li>
+              <img src="images/mercury-mercruiser.svg" alt="MerCruiser" />
+            </li>
+            <li>
+              <img src="images/outboards-by-yamaha.svg" alt="yamaha" />
+            </li>
+            <li>
+              <img src="images/SVGmix-yj5089-volvo-penta.svg" alt="volvo-penta" />
+            </li>     
+            <li>
+              <img src="images/tohatsu-company-logo.svg" alt="tohatsu" />
+            </li>        
+          </ul>
     </div>
     <footer class="w-full h-full border-t border-grey py-8 pin-b bg-gradient-to-b from-blue-950 to-blue-800">
       <div class="container flex flex-wrap mx-auto text-amber-100 gap-10">
@@ -131,5 +136,22 @@
       </div>
     </footer>
     <script src="js/menu.js"></script>
+    <script>
+      tailwind.config = {
+  theme: {
+    extend: {
+      animation: {
+        'infinite-scroll': 'infinite-scroll 25s linear infinite',
+      },
+      keyframes: {
+        'infinite-scroll': {
+          from: { transform: 'translateX(0)' },
+          to: { transform: 'translateX(-100%)' },
+        }
+      }                    
+    },
+  },
+}
+    </script>
   </body>
 </html>
