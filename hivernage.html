@@ -14,14 +14,14 @@
     <script src="js/lightbox-plus-jquery.min.js"></script>
   </head>
 
-  <body class="flex flex-col h-full items-start p-0 font-serif">
-    <header class=" flex p-4 flex-wrap flex-grow max-h-24 flex-auto min-w-full bg-blue-500">
-      <div class="flex flex-row justify-between md:justify-items-start w-full container mx-auto">
-        <nav class="flex w-full justify-between">
-          <div class="text-amber-100 flex flex-none">
+  <body class="flex flex-col items-start p-0 h-full font-serif">
+    <header class="flex flex-wrap flex-auto flex-grow p-4 min-w-full max-h-24 bg-blue-500">
+      <div class="container flex flex-row justify-between mx-auto w-full md:justify-items-start">
+        <nav class="flex justify-between w-full">
+          <div class="flex flex-none text-amber-100">
             <a href="./index.html">
               <svg
-                class="flex-none pt-2 w-full md:w-24 h-6"
+                class="flex-none pt-2 w-full h-12 md:w-24"
                 viewBox="0 0 85 23"
                 fill="none"
                 xmlns="http://www.w3.org/2000/svg"
@@ -32,9 +32,9 @@
                 />
               </svg></a>
 
-            <div class="flex flex-col px-4 w-60 flex-none">
+            <div class="flex flex-col flex-none px-4 w-60">
               <h1 class="text-lg text-amber-100">Marine Loisirs SA</h1>
-              <h2 class="text-xs font-sans text-amber-100">
+              <h2 class="font-sans text-xs text-amber-100">
                 Chantier Naval et Atelier Mécanique <br />
                 pour Moteurs Marins
               </h2>
@@ -45,13 +45,13 @@
               <li class="px-1"><a href="./index.html" class="text-pretty hover:border-b">Accueil</a></li>
               <li class="px-1"><a href="./entretien.html" class="text-pretty hover:border-b">Entretien</a></li>
               <li class="px-1"><a href="./hivernage.html" class="text-pretty hover:border-b">Hivernage</a></li>
-              <li class="px-1"><a href="#" class="text-pretty hover:border-b">Occasions</a></li>
+              <!-- <li class="px-1"><a href="#" class="text-pretty hover:border-b">Occasions</a></li> -->
           </ul>
           </div>
           <!--Hamburger menu icon svg to trigger the slide-in menu when clicked-->
           <div onclick="openNav()">
             <svg
-              class="md:hidden cursor-pointer object-right"
+              class="object-right cursor-pointer md:hidden"
               xmlns="http://www.w3.org/2000/svg"
               width="18.853"
               height="12"
@@ -99,25 +99,25 @@
           <div
             onclick="exitNav()"
             id="sideBar"
-            class="fixed top-0 right-0 bg-transparent w-0 h-full overflow-x-hidden duration-500 z-10"
+            class="overflow-x-hidden fixed top-0 right-0 z-10 w-0 h-full bg-transparent duration-500"
           >
             <!--navigation menu box-->
             <div
               id="sideNav"
-              class="fixed top-0 right-0 bg-gradient-to-r from-blue-950 to-blue-800 z-10 overflow-x-hidden duration-500 font-bold flex justify-center items-center h-full w-0"
+              class="flex overflow-x-hidden fixed top-0 right-0 z-10 justify-center items-center w-0 h-full font-bold bg-gradient-to-r to-blue-800 duration-500 from-blue-950"
             >
               <!--exit icon, it will close navbar when clicked-->
               <a
                 href="javascript:void(0)"
                 onclick="exitNav()"
-                class="text-3xl absolute top-0 right-0 mr-3 mt-2"
+                class="absolute top-0 right-0 mt-2 mr-3 text-3xl"
                 >&times;</a
               >
               <ul class="text-2xl text-amber-100 sm:text-3xl">
                 <li><a href="./index.html">Accueil</a></li>
                 <li><a href="./entretien.html">Entretien</a></li>
                 <li><a href="./hivernage.html">Hivernage</a></li>
-                <li><a href="#">Occasions</a></li>
+                <!-- <li><a href="#">Occasions</a></li> -->
               </ul>
             </div>
           </div>
@@ -129,7 +129,7 @@
     </div>
     <main class="p-4 w-full bg-amber-50">
       <section class="container mx-auto">
-        <h2 class="text-3xl">Hivernage</h2>
+        <h2 class="py-4 text-3xl">Hivernage</h2>
         <p class="mb-2">
           Nous disposons de plusieurs remorques de mise à l'eau pouvant
           accomoder des bateaux jusqu'a un poids maximum de 17 tonnes et d'une
@@ -144,34 +144,34 @@
         </p>
       </section>
     </main>
-    <div class="flex flex-wrap min-w-full justify-around p-4 bg-amber-50">
+    <div class="flex flex-wrap justify-around p-4 min-w-full bg-amber-50">
       <a href="images/mercury-mercruiser.svg" data-lightbox="mygallery">
         <img
-          class="w-28 duration-100 p-4 hover:drop-shadow-lg hover:scale-110"
+          class="p-4 w-28 duration-100 hover:drop-shadow-lg hover:scale-110"
           src="images/mercury-mercruiser.svg"
         />
       </a>
       <a href="images/outboards-by-yamaha.svg" data-lightbox="mygallery">
         <img
-          class="w-28 duration-100 p-4 hover:drop-shadow-lg hover:scale-110"
+          class="p-4 w-28 duration-100 hover:drop-shadow-lg hover:scale-110"
           src="images/outboards-by-yamaha.svg"
         />
       </a>
       <a href="images/SVGmix-yj5089-volvo-penta.svg" data-lightbox="mygallery">
         <img
-          class="w-28 duration-100 p-4 hover:drop-shadow-lg hover:scale-110"
+          class="p-4 w-28 duration-100 hover:drop-shadow-lg hover:scale-110"
           src="images/SVGmix-yj5089-volvo-penta.svg"
         />
       </a>
       <a href="images/tohatsu-company-logo.svg" data-lightbox="mygallery">
         <img
-          class="w-28 duration-100 p-4 pt-8 hover:drop-shadow-lg hover:scale-110"
+          class="p-4 pt-8 w-28 duration-100 hover:drop-shadow-lg hover:scale-110"
           src="images/tohatsu-company-logo.svg"
         />
       </a>
     </div>
-    <footer class="w-full h-full border-t border-grey py-8 pin-b bg-gradient-to-b from-blue-950 to-blue-800">
-      <div class="container mx-auto flex flex-wrap text-amber-100 gap-10">
+    <footer class="py-8 w-full h-full bg-gradient-to-b to-blue-800 border-t border-grey pin-b from-blue-950">
+      <div class="container flex flex-wrap gap-10 mx-auto text-amber-100">
         <div class="px-4">
           <p>Marine Loisirs <br />Rte suisse <br />1297 Founex</p>
         </div>
@@ -182,7 +182,7 @@
         </div>
       </div>
       <div class="container mx-auto">
-        <p class="p-4 text-amber-100 text-xs">Copyright 2024</p>
+        <p class="p-4 text-xs text-amber-100">Copyright 2024</p>
       </div>
     </footer>
     <script src="js/menu.js"></script>

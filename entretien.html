@@ -21,20 +21,20 @@
           from: { transform: 'translateX(0)' },
           to: { transform: 'translateX(-100%)' },
         }
-      }                    
+      }
     },
   },
 }
     </script>
   </head>
-  
-        <body class="flex flex-col items-start h-full p-0 font-serif">
-          <header class="flex flex-wrap flex-auto flex-grow max-h-24 p-4 min-w-full bg-blue-500">
+
+        <body class="flex flex-col items-start p-0 h-full font-serif">
+          <header class="flex flex-wrap flex-auto flex-grow p-4 min-w-full max-h-24 bg-blue-500">
               <div  class="container flex flex-row justify-between mx-auto w-full md:justify-items-start">
                 <nav class="flex justify-between w-full">
                     <div class="flex flex-none text-amber-100">
                       <a href="./index.html"><svg
-                        class="flex-none pt-2 w-full h-6 md:w-24"
+                        class="flex-none pt-2 w-full h-12 md:w-24"
                           viewBox="0 0 85 23"
                           fill="none"
                           xmlns="http://www.w3.org/2000/svg"
@@ -46,7 +46,7 @@
                         </svg></a>
 
                         <div class="flex flex-col flex-none px-4 w-60">
-                          <h1 class="text-lg  text-amber-100">Marine Loisirs SA</h1>
+                          <h1 class="text-lg text-amber-100">Marine Loisirs SA</h1>
                           <h2 class="font-sans text-xs text-amber-100">Chantier Naval et Atelier Mécanique <br> pour Moteurs Marins</h2>
                         </div>
                     </div>
@@ -55,12 +55,12 @@
                       <li class="px-1"><a href="./index.html" class="text-pretty hover:border-b">Accueil</a></li>
                       <li class="px-1"><a href="./entretien.html" class="text-pretty hover:border-b">Entretien</a></li>
                       <li class="px-1"><a href="./hivernage.html" class="text-pretty hover:border-b">Hivernage</a></li>
-                          <li class="px-1"><a href="#" class="text-pretty hover:border-b">Occasions</a></li>
+                          <!-- <li class="px-1"><a href="#" class="text-pretty hover:border-b">Occasions</a></li> -->
                       </ul>
                     </div>
                     <!--Hamburger menu icon svg to trigger the slide-in menu when clicked-->
                       <div onclick="openNav()">
-                          <svg class="md:hidden cursor-pointer object-right" xmlns="http://www.w3.org/2000/svg" width="18.853" height="12" viewBox="0 0 18.853 12">
+                          <svg class="object-right cursor-pointer md:hidden" xmlns="http://www.w3.org/2000/svg" width="18.853" height="12" viewBox="0 0 18.853 12">
                               <g id="Icon_feather-menu" data-name="Icon feather-menu" transform="translate(-4.5 -8)">
                                   <path id="Path_3" data-name="Path 3" d="M4.5,18H23.353" transform="translate(0 -4)" fill="none" stroke="#FFEFD5" stroke-linejoin="round" stroke-width="2"/>
                                   <path id="Path_4" data-name="Path 4" d="M4.5,9H23.353" transform="translate(0)" fill="none" stroke="#FFEFD5" stroke-linejoin="round" stroke-width="2"/>
@@ -69,16 +69,16 @@
                           </svg>
                       </div>
                     <!--background overlay element, it will close navbar when clicked-->
-                      <div onclick="exitNav()" id="sideBar" class="fixed top-0 right-0 bg-transparent w-0 h-full overflow-x-hidden duration-500 z-10">
+                      <div onclick="exitNav()" id="sideBar" class="overflow-x-hidden fixed top-0 right-0 z-10 w-0 h-full bg-transparent duration-500">
                           <!--navigation menu box-->
-                          <div id="sideNav" class="fixed top-0 right-0 bg-gradient-to-r from-blue-950 to-blue-800 z-10 overflow-x-hidden duration-500 font-bold flex justify-center items-center h-full w-0">
+                          <div id="sideNav" class="flex overflow-x-hidden fixed top-0 right-0 z-10 justify-center items-center w-0 h-full font-bold bg-gradient-to-r to-blue-800 duration-500 from-blue-950">
                               <!--exit icon, it will close navbar when clicked-->
-                              <a href="javascript:void(0)" onclick="exitNav()" class="text-3xl absolute top-0 right-0 mr-3 mt-2">&times;</a>
+                              <a href="javascript:void(0)" onclick="exitNav()" class="absolute top-0 right-0 mt-2 mr-3 text-3xl">&times;</a>
                               <ul class="text-2xl text-amber-100 sm:text-3xl">
                                   <li><a href="./index.html">Accueil</a></li>
                                   <li><a href="./entretien.html">Entretien</a></li>
                                   <li><a href="./hivernage.html">Hivernage</a></li>
-                                  <li><a href="#">Occasions</a></li>
+                                  <!-- <li><a href="#">Occasions</a></li> -->
                               </ul>
                           </div>
                       </div>
@@ -98,32 +98,63 @@
            Nous avons parmis nos clients, differentes organisations de suretes qui nous font confiance avec leurs bateaux de sauvetage, qui doivent fonctioner à tout moment sans faille et qui sont parfois mis à rude épreuve. <br>
            Nos mécaniciens sont formés dans les téchnologies de pointe et suivent chaque année des cours de mécanique spécialisé.
           </p>
+
+
+
       </section>
-    </main>
-      <div x-data="{}"
-      x-init="$nextTick(() => {
-          let ul = $refs.logos;
-          ul.insertAdjacentHTML('afterend', ul.outerHTML);
-          ul.nextSibling.setAttribute('aria-hidden', 'true');
-      })" class="w-full inline-flex flex-nowrap h-max-48 pb-4 bg-amber-50 overflow-hidden [mask-image:_linear-gradient(to_right,transparent_0,_black_128px,_black_calc(100%-200px),transparent_100%)]">
-        <ul x-ref="logos" class="animate-infinite-scroll flex items-center md:justify-start [&_li]:mx-8 [&_img]:max-w-40 [&_img]:max-h-48">
+
+      <div class="w-full inline-flex flex-nowrap h-max-48 pb-4 bg-amber-50 overflow-hidden [mask-image:_linear-gradient(to_right,transparent_0,_black_128px,_black_calc(100%-200px),transparent_100%)]">
+        <ul class="animate-infinite-scroll flex items-center md:justify-start [&_li]:mx-8 [&_img]:max-w-40 [&_img]:max-h-48">
             <li>
-              <img src="images/mercury-mercruiser.svg" alt="MerCruiser" />
+              <img src="images/mercury-mercruiser.svg" alt="MerCruiser" class="aspect-video"/>
             </li>
             <li>
               <img src="images/outboards-by-yamaha.svg" alt="yamaha" />
             </li>
             <li>
               <img src="images/SVGmix-yj5089-volvo-penta.svg" alt="volvo-penta" />
-            </li>     
+            </li>
             <li>
               <img src="images/tohatsu-company-logo.svg" alt="tohatsu" />
-            </li>        
+            </li>
+
           </ul>
-          
+          <ul class="animate-infinite-scroll flex items-center md:justify-start [&_li]:mx-8 [&_img]:max-w-40 [&_img]:max-h-48" aria-hidden="true">
+            <li>
+              <img src="images/mercury-mercruiser.svg" alt="MerCruiser" class="aspect-video"/>
+            </li>
+            <li>
+              <img src="images/outboards-by-yamaha.svg" alt="yamaha" />
+            </li>
+            <li>
+              <img src="images/SVGmix-yj5089-volvo-penta.svg" alt="volvo-penta" />
+            </li>
+            <li>
+              <img src="images/tohatsu-company-logo.svg" alt="tohatsu" />
+            </li>
+
+          </ul>
+          <ul class="animate-infinite-scroll flex items-center md:justify-start [&_li]:mx-8 [&_img]:max-w-40 [&_img]:max-h-48" aria-hidden="true">
+            <li>
+              <img src="images/mercury-mercruiser.svg" alt="MerCruiser" class="aspect-video"/>
+            </li>
+            <li>
+              <img src="images/outboards-by-yamaha.svg" alt="yamaha" />
+            </li>
+            <li>
+              <img src="images/SVGmix-yj5089-volvo-penta.svg" alt="volvo-penta" />
+            </li>
+            <li>
+              <img src="images/tohatsu-company-logo.svg" alt="tohatsu" />
+            </li>
+
+          </ul>
+
     </div>
-    <footer class="w-full border-t border-grey py-8 bg-gradient-to-b from-blue-950 to-blue-800">
-      <div class="container flex flex-wrap mx-auto text-amber-100 gap-10">
+    </main>
+
+    <footer class="py-8 w-full bg-gradient-to-b to-blue-800 border-t border-grey from-blue-950">
+      <div class="container flex flex-wrap gap-10 mx-auto text-amber-100">
         <div class="px-4">
           <p>Marine Loisirs <br />Rte suisse <br />1297 Founex</p>
         </div>
@@ -134,11 +165,11 @@
         </div>
       </div>
       <div class="container mx-auto">
-        <p class="p-4 text-amber-100 text-xs">Copyright 2024</p>
+        <p class="p-4 text-xs text-amber-100">Copyright 2024</p>
       </div>
     </footer>
-  
+
     <script src="js/menu.js"></script>
-    
+
   </body>
 </html>
